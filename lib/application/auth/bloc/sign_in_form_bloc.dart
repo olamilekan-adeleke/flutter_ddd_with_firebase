@@ -12,11 +12,10 @@ part 'sign_in_form_event.dart';
 part 'sign_in_form_state.dart';
 
 class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
-  final IAuthFacade iAuthFacade;
+  final IAuthFacade authFacade;
 
-  SignInFormBloc({
-    required this.iAuthFacade,
-  }) : super(SignInFormState.initial()) {
+  SignInFormBloc({required this.authFacade})
+      : super(SignInFormState.initial()) {
     on<SignInFormEvent>((event, emit) {
       // TODO: implement event handler
     });
